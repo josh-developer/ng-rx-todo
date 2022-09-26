@@ -38,8 +38,7 @@ export class TodoService {
   mapResponse = <T>(source: Observable<T>) =>
     source.pipe(
       map((response: any) => {
-        this.isHttpError = !this.isHttpError;
-        if (!this.isHttpError) {
+        if (this.isHttpError) {
           return response;
         }
         throw new Error(TODO_ALERTS.ErrorMsg());

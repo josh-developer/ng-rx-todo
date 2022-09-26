@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideMockStore } from '@ngrx/store/testing';
 import { WeekChartComponent } from './week-chart.component';
 
 describe('WeekChartComponent', () => {
@@ -8,9 +8,9 @@ describe('WeekChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeekChartComponent ]
-    })
-    .compileComponents();
+      declarations: [WeekChartComponent],
+      providers: [provideMockStore({})],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WeekChartComponent);
     component = fixture.componentInstance;

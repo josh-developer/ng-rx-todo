@@ -35,8 +35,8 @@ export class TodoItemComponent {
   }
 
   completeBtn(): void {
-    const newTodo = JSON.parse(JSON.stringify(this.todo));
-    newTodo.completed = !newTodo.completed;
+    const newTodo = JSON.parse(JSON.stringify(this.todo)) || {};
+    newTodo.completed = !newTodo?.completed;
     this.store.dispatch(editTodo({ index: this.index, todo: newTodo }));
   }
 }

@@ -12,8 +12,6 @@ import { AlertService } from './shared/alert/alert.service';
   template: `
     <main>
       <router-outlet></router-outlet>
-      <!-- <button holdable (holdTime)="holdHandler($event)" [disabled]="progress >= 100">HOLD ME</button>
-      <progress [value]="progress" max="100"></progress> -->
     </main>
   `,
 })
@@ -52,7 +50,6 @@ export class AppComponent implements OnInit {
   }
 
   holdHandler(e: number) {
-
     this.progress = e / 10;
     console.log(this.progress);
   }
