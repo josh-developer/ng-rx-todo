@@ -1,0 +1,31 @@
+@use "../../../../styles/variables/colors";
+
+.completed-todo {
+  background-color: rgba(0, 200, 0, 0.2);
+}
+
+.todo-actions {
+  float: right;
+
+  button {
+    color: colors.$textColorWhite;
+    margin: 2px 3px;
+    &.delete-btn {
+      background-color: colors.$dangerColor;
+    }
+
+    &.edit-btn {
+      color: colors.$textColorWhite;
+      background-color: colors.$primaryColor;
+      margin: 2px 3px;
+    }
+
+    &.complete-btn {
+      background-color: rgba(0, 200, 0, 0.6);
+    }
+  }
+}
+
+:host ::ng-deep .mat-expansion-panel-body {
+  padding: 0 10px 16px !important;
+}

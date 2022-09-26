@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <h4 id="logo" routerLink="/todos">Todos</h4>
+  <span class="spacer"></span>
+  <button [routerLink]="['/add']" routerLinkActive="link-active" mat-icon-button>
+    <mat-icon>add</mat-icon>
+  </button>
+  <button [routerLink]="['/analytics']" routerLinkActive="link-active" mat-icon-button>
+    <mat-icon><mat-icon>bar_chart</mat-icon></mat-icon>
+  </button>
+</mat-toolbar>

@@ -1,0 +1,34 @@
+<mat-expansion-panel [hideToggle]="false" [ngClass]="todo.completed ? 'completed-todo' : ''">
+  <mat-expansion-panel-header>
+    <mat-panel-title> {{ todo.title }} </mat-panel-title>
+    <mat-panel-description>
+      {{ todo.date | date: "dd-MMMM yyyy" }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>
+    {{ todo.desc }}
+  </p>
+
+  <div class="todo-actions">
+    <button mat-icon-button class="complete-btn" (click)="completeBtn()">
+      <mat-icon>check</mat-icon>
+    </button>
+    <button mat-icon-button [routerLink]="['/edit', index]" class="edit-btn">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button class="delete-btn" (click)="deleteTodo()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-expansion-panel>
+
+<ng-template #dialogTemplate>
+  <h1 mat-dialog-title>Delete todo</h1>
+  <div mat-dialog-content>
+    Would you like to delete <b>{{ todo.title }}</b>?
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close="false">No</button>
+    <button mat-raised-button [mat-dialog-close]="true">Delete</button>
+  </div>
+</ng-template>

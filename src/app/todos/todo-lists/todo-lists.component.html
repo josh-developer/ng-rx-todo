@@ -1,0 +1,13 @@
+<mat-accordion>
+  <section>
+    <h3 *ngIf="(todos | async)?.length === 0; else todoList">Add Todo !</h3>
+
+    <ng-template #todoList>
+      <ng-container *ngFor="let todo of todos | async; let i = index">
+        <p>
+          <todo-item [todo]="todo" [index]="i"> </todo-item>
+        </p>
+      </ng-container>
+    </ng-template>
+  </section>
+</mat-accordion>

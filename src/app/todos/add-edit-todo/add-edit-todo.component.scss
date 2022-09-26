@@ -1,0 +1,14 @@
+@use "../../../styles/variables/colors";
+
+form {
+  width: 100%;
+  mat-form-field {
+    width: 100%;
+  }
+  .submit-btn {
+    float: right;
+    margin: 10px 0;
+    color: colors.$textColorWhite;
+    background-color: colors.$primaryColor;
+  }
+}
