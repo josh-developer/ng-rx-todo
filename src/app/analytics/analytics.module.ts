@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AnalyticsComponent } from './analytics.component';
-import { TodosChartComponent } from './todos-chart/todos-chart.component';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { AnalyticsComponent } from "./analytics.component";
+import { TodosChartComponent } from "./todos-chart/todos-chart.component";
 import {
   Chart,
   ArcElement,
@@ -20,9 +20,9 @@ import {
   Title,
   Tooltip,
   SubTitle,
-  CategoryScale
-} from 'chart.js';
-import { WeekChartComponent } from './week-chart/week-chart.component';
+  CategoryScale,
+} from "chart.js";
+import { WeekChartComponent } from "./week-chart/week-chart.component";
 
 Chart.register(
   ArcElement,

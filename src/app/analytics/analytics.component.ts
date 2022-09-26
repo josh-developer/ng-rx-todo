@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'analytics',
+  selector: "analytics",
   template: `
     <todos-chart></todos-chart>
     <hr />

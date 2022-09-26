@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideMockStore } from '@ngrx/store/testing';
-import { TodoListsComponent } from './todo-lists.component';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { provideMockStore } from "@ngrx/store/testing";
+import { TodoListsComponent } from "./todo-lists.component";
 
-describe('TodoListsComponent', () => {
+describe("TodoListsComponent", () => {
   let component: TodoListsComponent;
   let fixture: ComponentFixture<TodoListsComponent>;
 
@@ -17,7 +17,7 @@ describe('TodoListsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

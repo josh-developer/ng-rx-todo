@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideMockStore } from '@ngrx/store/testing';
-import { WeekChartComponent } from './week-chart.component';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { provideMockStore } from "@ngrx/store/testing";
+import { WeekChartComponent } from "./week-chart.component";
 
-describe('WeekChartComponent', () => {
+describe("WeekChartComponent", () => {
   let component: WeekChartComponent;
   let fixture: ComponentFixture<WeekChartComponent>;
 
@@ -17,7 +17,7 @@ describe('WeekChartComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

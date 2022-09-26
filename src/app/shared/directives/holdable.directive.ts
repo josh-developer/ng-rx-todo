@@ -1,8 +1,8 @@
-import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
-import { filter, interval, Observable, Subject, takeUntil, tap } from 'rxjs';
+import { Directive, EventEmitter, HostListener, Output } from "@angular/core";
+import { filter, interval, Observable, Subject, takeUntil, tap } from "rxjs";
 
 @Directive({
-  selector: '[holdable]',
+  selector: "[holdable]",
 })
 export class HoldableDirective {
   @Output() holdTime = new EventEmitter<number>();
@@ -13,22 +13,22 @@ export class HoldableDirective {
 
   constructor() {
     this.cancel = this.state.pipe(
-      filter((v) => v === 'cancel'),
+      filter((v) => v === "cancel"),
       tap((v) => {
-        console.log('stopped hold ');
+        console.log("stopped hold ");
         this.holdTime.emit(0);
       })
     );
   }
 
-  @HostListener('mouseup', ['$event'])
-  @HostListener('mouseleave', ['$event'])
+  @HostListener("mouseup", ["$event"])
+  @HostListener("mouseleave", ["$event"])
   onExit() {
-    this.state.next('cancel');
+    this.state.next("cancel");
   }
 
-  @HostListener('mousedown', ['$event']) onHold() {
-    console.log('%c started hold', 'color: #5fba7d; font-weight: bold;');
+  @HostListener("mousedown", ["$event"]) onHold() {
+    console.log("%c started hold", "color: #5fba7d; font-weight: bold;");
 
     const n = 100;
 

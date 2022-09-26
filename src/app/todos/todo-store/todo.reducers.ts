@@ -1,12 +1,12 @@
-import { createReducer, on } from '@ngrx/store';
-import { ITodo } from '../../shared/interfaces/todo';
+import { createReducer, on } from "@ngrx/store";
+import { ITodo } from "../../shared/interfaces/todo";
 import {
   addTodoSuccess,
   editTodoSuccess,
   removeTodoSuccess,
-} from './todo.actions';
+} from "./todo.actions";
 
-export const TODOS_LOCAL_NAME = 'todos';
+export const TODOS_LOCAL_NAME = "todos";
 const savedTodos = JSON.parse(localStorage.getItem(TODOS_LOCAL_NAME)!);
 const initialTodos: ITodo[] = savedTodos || [];
 

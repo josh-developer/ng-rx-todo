@@ -1,4 +1,7 @@
-<mat-expansion-panel [hideToggle]="false" [ngClass]="todo['completed'] ? 'completed-todo' : ''">
+<mat-expansion-panel
+  [hideToggle]="false"
+  [ngClass]="todo['completed'] ? 'completed-todo' : ''"
+>
   <mat-expansion-panel-header>
     <mat-panel-title> {{ todo.title }} </mat-panel-title>
     <mat-panel-description>
@@ -25,7 +28,8 @@
 <ng-template #dialogTemplate>
   <h1 mat-dialog-title>Delete todo</h1>
   <div mat-dialog-content>
-    Would you like to delete <b>{{ todo.title }}</b>?
+    Would you like to delete <b>{{ todo.title }}</b
+    >?
   </div>
   <div mat-dialog-actions>
     <button mat-button mat-dialog-close="false">No</button>

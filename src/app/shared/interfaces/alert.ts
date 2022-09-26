@@ -1,12 +1,12 @@
 export interface IAlert {
   msg: string;
-  type?: 'success' | 'error' | 'info';
+  type?: "success" | "error" | "info";
 }
 
 export enum ALERT {
-  Success = 'success',
-  Error = 'error',
-  Info = 'info',
+  Success = "success",
+  Error = "error",
+  Info = "info",
 }
 
 export const TODO_ALERTS = {

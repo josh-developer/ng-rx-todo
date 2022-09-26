@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { LoaderService } from '../shared/loader/loader.service';
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
+import { LoaderService } from "../shared/loader/loader.service";
 
 @Component({
-  selector: 'todos',
+  selector: "todos",
   template: `
     <div id="todos-wrapper">
       <todo-lists-header></todo-lists-header>
@@ -19,7 +19,7 @@ import { LoaderService } from '../shared/loader/loader.service';
   `,
   styles: [
     `
-      @use '../../styles/variables/sizes';
+      @use "../../styles/variables/sizes";
 
       $spinnerSize: var(--spinnerSize);
 

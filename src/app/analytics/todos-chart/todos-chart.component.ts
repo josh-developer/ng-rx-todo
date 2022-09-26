@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { select, Store } from '@ngrx/store';
-import { Chart } from 'chart.js';
-import { AppState } from 'src/app/shared/interfaces/appState';
+import { Component, OnInit } from "@angular/core";
+import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
+import { select, Store } from "@ngrx/store";
+import { Chart } from "chart.js";
+import { AppState } from "src/app/shared/interfaces/appState";
 
 @UntilDestroy()
 @Component({
-  selector: 'todos-chart',
+  selector: "todos-chart",
   template: `
     <h2>Completed and new todos</h2>
     <div id="todos-chart-container">
@@ -15,7 +15,7 @@ import { AppState } from 'src/app/shared/interfaces/appState';
   `,
   styles: [
     `
-      @use '../../../styles/variables/colors';
+      @use "../../../styles/variables/colors";
 
       #todos-chart-container {
         display: block;
@@ -45,18 +45,18 @@ export class TodosChartComponent implements OnInit {
         )?.length;
         const newTodosCount = todos.filter((todo) => !todo.completed)?.length;
 
-        new Chart('todos-chart', {
-          type: 'doughnut',
+        new Chart("todos-chart", {
+          type: "doughnut",
           data: {
-            labels: ['Completed', 'New'],
+            labels: ["Completed", "New"],
             datasets: [
               {
-                label: 'Completed todos',
+                label: "Completed todos",
                 data: [completedTodosCount, newTodosCount],
-                borderColor: ['rgb(255, 99, 132)', 'rgb(255, 99, 132)'],
+                borderColor: ["rgb(255, 99, 132)", "rgb(255, 99, 132)"],
                 backgroundColor: [
-                  'rgba(0, 255, 20, 0.6)',
-                  'rgba(0, 25, 220, 0.6)',
+                  "rgba(0, 255, 20, 0.6)",
+                  "rgba(0, 25, 220, 0.6)",
                 ],
               },
             ],

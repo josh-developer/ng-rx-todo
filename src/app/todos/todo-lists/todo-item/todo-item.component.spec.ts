@@ -1,15 +1,15 @@
-import { Overlay } from '@angular/cdk/overlay';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Overlay } from "@angular/cdk/overlay";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 import {
   MatDialog,
   MatDialogModule,
   MatDialogRef,
   MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
-import { provideMockStore } from '@ngrx/store/testing';
-import { TodoItemComponent } from './todo-item.component';
+} from "@angular/material/dialog";
+import { provideMockStore } from "@ngrx/store/testing";
+import { TodoItemComponent } from "./todo-item.component";
 
-describe('TodoItemComponent', () => {
+describe("TodoItemComponent", () => {
   let component: TodoItemComponent;
   let fixture: ComponentFixture<TodoItemComponent>;
 
@@ -29,7 +29,7 @@ describe('TodoItemComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

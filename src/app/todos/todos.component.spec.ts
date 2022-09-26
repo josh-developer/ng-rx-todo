@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { provideMockStore } from '@ngrx/store/testing';
-import { TodosComponent } from './todos.component';
+import { provideMockStore } from "@ngrx/store/testing";
+import { TodosComponent } from "./todos.component";
 
-describe('TodosComponent', () => {
+describe("TodosComponent", () => {
   let component: TodosComponent;
   let fixture: ComponentFixture<TodosComponent>;
 
@@ -18,7 +18,7 @@ describe('TodosComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

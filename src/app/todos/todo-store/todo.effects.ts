@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Actions, ofType, createEffect } from '@ngrx/effects';
-import { catchError, map, mergeMap, Observable, of, tap } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { Actions, ofType, createEffect } from "@ngrx/effects";
+import { catchError, map, mergeMap, Observable, of, tap } from "rxjs";
 import {
   addTodo,
   addTodoSuccess,
@@ -8,13 +8,13 @@ import {
   editTodoSuccess,
   removeTodo,
   removeTodoSuccess,
-} from './todo.actions';
-import { ITodoResponse, TodoService } from '../services/todo.service';
-import { AlertService } from 'src/app/shared/alert/alert.service';
-import { LoaderService } from 'src/app/shared/loader/loader.service';
-import { ITodo } from 'src/app/shared/interfaces/todo';
-import { ALERT, IAlert } from 'src/app/shared/interfaces/alert';
-import { Action } from '@ngrx/store';
+} from "./todo.actions";
+import { ITodoResponse, TodoService } from "../services/todo.service";
+import { AlertService } from "src/app/shared/alert/alert.service";
+import { LoaderService } from "src/app/shared/loader/loader.service";
+import { ITodo } from "src/app/shared/interfaces/todo";
+import { ALERT, IAlert } from "src/app/shared/interfaces/alert";
+import { Action } from "@ngrx/store";
 
 @Injectable()
 export class TodoEffects {

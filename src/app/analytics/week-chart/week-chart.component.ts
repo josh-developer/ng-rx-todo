@@ -1,14 +1,14 @@
-import { DatePipe } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { select, Store } from '@ngrx/store';
-import { Chart } from 'chart.js';
-import { AppState } from 'src/app/shared/interfaces/appState';
-import { ITodo } from 'src/app/shared/interfaces/todo';
+import { DatePipe } from "@angular/common";
+import { AfterViewInit, Component } from "@angular/core";
+import { UntilDestroy, untilDestroyed } from "@ngneat/until-destroy";
+import { select, Store } from "@ngrx/store";
+import { Chart } from "chart.js";
+import { AppState } from "src/app/shared/interfaces/appState";
+import { ITodo } from "src/app/shared/interfaces/todo";
 
 @UntilDestroy()
 @Component({
-  selector: 'week-chart',
+  selector: "week-chart",
   template: `
     <h2>Todos in next 7 days</h2>
     <div id="week-chart-container">
@@ -17,7 +17,7 @@ import { ITodo } from 'src/app/shared/interfaces/todo';
   `,
   styles: [
     `
-      @use '../../../styles/variables/colors';
+      @use "../../../styles/variables/colors";
 
       #week-chart-container {
         display: block;
@@ -49,8 +49,8 @@ export class WeekChartComponent implements AfterViewInit {
           datasets: this.getDatasets(todosData),
         };
 
-        new Chart('week-chart', {
-          type: 'bar',
+        new Chart("week-chart", {
+          type: "bar",
           data: data,
           options: {
             scales: {
@@ -60,7 +60,7 @@ export class WeekChartComponent implements AfterViewInit {
                 },
               },
             },
-            indexAxis: 'x',
+            indexAxis: "x",
             responsive: true,
             maintainAspectRatio: false,
           },
@@ -94,27 +94,27 @@ export class WeekChartComponent implements AfterViewInit {
   getDatasets(todosData: number[]) {
     return [
       {
-        axis: 'y',
-        label: 'Todos for 7 days',
+        axis: "y",
+        label: "Todos for 7 days",
         data: todosData,
         fill: false,
         backgroundColor: [
-          'rgba(255, 99, 132, 0.4)',
-          'rgba(255, 159, 64, 0.4)',
-          'rgba(255, 205, 86, 0.4)',
-          'rgba(75, 192, 192, 0.4)',
-          'rgba(54, 162, 235, 0.4)',
-          'rgba(153, 102, 255, 0.4)',
-          'rgba(201, 203, 207, 0.4)',
+          "rgba(255, 99, 132, 0.4)",
+          "rgba(255, 159, 64, 0.4)",
+          "rgba(255, 205, 86, 0.4)",
+          "rgba(75, 192, 192, 0.4)",
+          "rgba(54, 162, 235, 0.4)",
+          "rgba(153, 102, 255, 0.4)",
+          "rgba(201, 203, 207, 0.4)",
         ],
         borderColor: [
-          'rgb(255, 99, 132)',
-          'rgb(255, 159, 64)',
-          'rgb(255, 205, 86)',
-          'rgb(75, 192, 192)',
-          'rgb(54, 162, 235)',
-          'rgb(153, 102, 255)',
-          'rgb(201, 203, 207)',
+          "rgb(255, 99, 132)",
+          "rgb(255, 159, 64)",
+          "rgb(255, 205, 86)",
+          "rgb(75, 192, 192)",
+          "rgb(54, 162, 235)",
+          "rgb(153, 102, 255)",
+          "rgb(201, 203, 207)",
         ],
         borderWidth: 1,
       },
