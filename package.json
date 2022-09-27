@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "format:check": "prettier --check .",
     "format:write": "prettier --write ."
   },
@@ -46,6 +47,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "nx": "14.4.1",
     "prettier": "2.7.1",
+    "puppeteer": "^18.0.5",
     "typescript": "~4.7.2"
   }
 }
