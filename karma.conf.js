@@ -33,7 +33,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ["ChromeHeadless", "Firefox"],
+    browsers: ["ChromeHeadless", "Chrome"],
     plugins: [
       require("karma-jasmine"),
       require("karma-chrome-launcher"),
