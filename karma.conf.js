@@ -20,6 +20,7 @@ module.exports = function (config) {
       },
       clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
+
     jasmineHtmlReporter: {
       suppressAll: true, // removes the duplicated traces
     },
@@ -33,11 +34,9 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
+
     browsers: ["ChromeHeadless", "Chrome"],
-    plugins: [
-      require("karma-jasmine"),
-      require("karma-chrome-launcher"),
-    ],
+    plugins: [require("karma-jasmine"), require("karma-chrome-launcher")],
     singleRun: false,
     restartOnFileChange: true,
   });
