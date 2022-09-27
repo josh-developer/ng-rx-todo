@@ -36,7 +36,6 @@ module.exports = function (config) {
     autoWatch: true,
 
     browsers: ["ChromeHeadless", "Chrome"],
-    plugins: [require("karma-jasmine"), require("karma-chrome-launcher")],
     singleRun: false,
     restartOnFileChange: true,
   });
