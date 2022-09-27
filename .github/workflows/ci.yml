@@ -14,6 +14,6 @@ jobs:
           node-version: "16.14.x"
       - run: npm ci
       - run: npm run format:check
-      - run: npm run test --code-coverage
+      - run: npm run test-ci --code-coverage
         env:
           CI: true
