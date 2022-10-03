@@ -23,17 +23,28 @@ jobs:
           node-version: "16.14.x"
       - run: npm ci
       - run: npm run format:check
-      - run: npm run test-headless --code-coverage
+      - run: npm run test-headless
         env:
           CI: true
+      - name: Upload Test Coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage
+          path: coverage
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
+      - name: Upload Build Folder
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build
       - name: Deploy to Staging
         if: github.event_name == 'push'
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: "my-ci-cd.surge.sh"
-          project: "."
+          project: "./dist/ng-rx-todo"
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
