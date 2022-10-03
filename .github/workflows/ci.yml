@@ -34,6 +34,6 @@ jobs:
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: "my-ci-cd.surge.sh"
-          project: "."
+          project: "./dist/ng-rx-todo"
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
