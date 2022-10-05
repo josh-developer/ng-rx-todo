@@ -45,8 +45,8 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Deploy to Staging
-        if: github.event_name == 'push'
+      - name: Deploy to Production
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: "my-ci-cd.surge.sh"
