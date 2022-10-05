@@ -1,5 +1,5 @@
 module.exports = {
-  branches: "master",
+  branches: "main",
   repositoryUrl: "https://github.com/josh-developer/CI-CD-practice",
   plugins: [
     "@semantic-release/commit-analyzer",
