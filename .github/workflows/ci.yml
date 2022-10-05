@@ -53,3 +53,8 @@ jobs:
           project: "./dist/ng-rx-todo"
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
+      - name: Upload Coverage Reports
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: npx codecov
+        env:
+          CODECOV_TOKEN: db97c54d-e02c-4f46-8e9b-83e0c2ebdecc
